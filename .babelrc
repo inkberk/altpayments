@@ -1,0 +1,22 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false
+        //"targets": {
+        // The % refers to the global coverage of users from browserslist
+        //"browsers": [ ">0.25%", "not ie 11", "not op_mini all"]
+        //}
+        //"chrome": "52" }
+        //"node": "6.10"
+        //"node": "current"
+      }
+    ]
+  ],
+  "env": {
+    "production": {
+      "presets": ["minify"]
+    }
+  }
+}

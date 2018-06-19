@@ -13,7 +13,6 @@ export class CustomerModel {
 
   account_number?: number;
   account_type?: string;
-  bitcoin_email?: string;
   business_name?: string;
   business_phone: string;
   days?: number;
