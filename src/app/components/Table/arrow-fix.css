@@ -1,0 +1,4 @@
+.-sort-desc > div > div > div {
+  background-image: url('../../../assets/icons/down.svg') !important;
+  transform: rotate(180deg);
+}

@@ -1,0 +1,76 @@
+@import "../../../../assets/styles/colors";
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  & > section {
+    width: 100%;
+    height: calc(100vh - 84px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+form {
+  width: 380px;
+  top: -5vh;
+
+  h1, .message {
+    text-align: center;
+  }
+  h1 {
+    margin-bottom: 12px;
+  }
+  .message {
+    margin-bottom: 24px;
+
+    a {
+      color: $blue;
+    }
+  }
+
+  .input_area {
+    margin-bottom: 12px;
+  }
+
+  .options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0 12px 12px;
+
+    & > a {
+      opacity: 0.5;
+    }
+  }
+
+  .remember_area {
+    display: flex;
+    align-items: center;
+
+    .text {
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+
+  .button_area {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 24px 0 0 0;
+
+    & > a {
+      opacity: 0.5;
+      margin-right: 24px;
+    }
+
+    & > span {
+      width: 153px;
+    }
+  }
+
+}

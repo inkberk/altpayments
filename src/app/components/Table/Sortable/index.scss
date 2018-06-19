@@ -1,0 +1,19 @@
+@import "../../../../assets/styles/colors";
+
+.sortable{
+  width: max-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  &.up .arrow{
+    transform: rotate(180deg);
+  }
+
+  .arrow{
+    margin-left: 6px;
+    width: 6px;
+    height: 8px;
+    background-image: url("../../../../assets/icons/down.svg");
+  }
+}

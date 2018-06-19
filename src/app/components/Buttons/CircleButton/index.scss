@@ -1,0 +1,44 @@
+@import "../../../../assets/styles/colors";
+
+.button_area {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    .circle_button {
+      background: $blue;
+      border-color: $blue;
+
+      img {
+        filter: brightness(500%);
+      }
+    }
+    p {
+      color: $blue;
+    }
+  }
+
+  .circle_button {
+    width: 36px;
+    height: 36px;
+    border: 1px solid $black;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+  }
+  p {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 600;
+    color: $black;
+    margin-left: 12px;
+    top: -1px;
+  }
+}

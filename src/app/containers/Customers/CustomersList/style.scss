@@ -1,0 +1,128 @@
+@import "../../../../assets/styles/colors";
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.list {
+  width: 100%;
+  padding: 40px 50px 0;
+
+  header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    & > *:nth-child(2) {
+      margin-right: 24px;
+    }
+
+    h1 {
+      margin-right: auto;
+    }
+
+  }
+
+  .table {
+    padding: 20px 0 48px;
+    height: calc(100vh - 227px);
+    display: flex;
+    flex-direction: column;
+
+    //.green_state{
+    //  width: 5px;
+    //  height: 100%;
+    //  background: $green;
+    //  border-radius: 2px 0 0 2px;
+    //}
+    //.yellow_state{
+    //  width: 5px;
+    //  height: 100%;
+    //  background: $yellow;
+    //  border-radius: 2px 0 0 2px;
+    //}
+    //.red_state{
+    //  width: 5px;
+    //  height: 100%;
+    //  background: $red;
+    //  border-radius: 2px 0 0 2px;
+    //}
+
+    .green {
+      font-weight: 700;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: $green;
+        border-radius: 1px;
+        font-weight: 700;
+      }
+    }
+    .yellow {
+      font-weight: 700;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: $yellow;
+        border-radius: 1px;
+      }
+    }
+    .red {
+      font-weight: 700;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: $red;
+        border-radius: 1px;
+      }
+    }
+
+    .mail {
+      width: 30px;
+      height: 21px;
+
+      background-image: url("../../../../assets/icons/mail.svg");
+      background-size: 24px 17px;
+      background-position: center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+
+      &:hover {
+        background-image: url("../../../../assets/icons/mail-blue.svg");
+      }
+    }
+    .invoice {
+      width: 25px;
+      height: 30px;
+
+      background-image: url("../../../../assets/icons/invoice.svg");
+      background-size: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+
+      &:hover {
+        background-image: url("../../../../assets/icons/invoice-blue.svg");
+      }
+    }
+
+  }
+}

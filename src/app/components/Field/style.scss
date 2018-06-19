@@ -1,0 +1,269 @@
+.w100 {
+  width: 100%;
+}
+
+.w75 {
+  width: 75%;
+}
+
+.w50 {
+  width: 50%;
+}
+
+.w33 {
+  width: 33%;
+}
+
+.w25 {
+  width: 25%;
+}
+
+.wrapper {
+  display: block;
+  color: rgba(34, 50, 67, 0.5);
+  font-weight: 700;
+  line-height: 14px;
+  font-size: 12px;
+  position: relative;
+
+  input {
+    z-index: 2;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #D2D2D2;
+    background: inherit;
+    color: #333333;
+    outline: 0;
+    text-overflow: ellipsis;
+    padding: 20px 12px 7px 12px;
+    position: relative;
+    &::-webkit-input-placeholder {
+      color: rgba(144, 152, 161, 0)
+    }
+    &::-moz-placeholder {
+      color: rgba(144, 152, 161, 0)
+    }
+    &:-moz-placeholder {
+      color: rgba(144, 152, 161, 0)
+    }
+    &:-ms-input-placeholder {
+      color: rgba(144, 152, 161, 0)
+    }
+
+    &.none {
+      width: 100%;
+    }
+
+    &:disabled {
+      border-bottom: 1px solid rgba(222, 235, 247, 0.3);
+      &::-webkit-input-placeholder {
+        color: rgba(144, 152, 161, 0.3)
+      }
+      &::-moz-placeholder {
+        color: rgba(144, 152, 161, 0.3)
+      }
+      &:-moz-placeholder {
+        color: rgba(144, 152, 161, 0.3)
+      }
+      &:-ms-input-placeholder {
+        color: rgba(144, 152, 161, 0.3)
+      }
+      & + label {
+        color: rgba(51, 51, 51, 0.3) !important;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  label {
+    width: 100%;
+    padding: 0 12px 0 12px;
+    display: block;
+    white-space: nowrap;
+
+    &.none {
+      padding: 0;
+    }
+  }
+
+  input:invalid {
+    outline: none;
+    box-shadow: none;
+  }
+
+  input:not(:focus) + label {
+    display: block;
+    top: 22px;
+    position: absolute;
+    color: rgba(51, 51, 51, 0.6);
+    transition: 0.2s cubic-bezier(.4, 0, .2, 1);
+
+    span {
+      right: -100%;
+      transition: 0.2s cubic-bezier(.4, 0, .2, 1);
+    }
+  }
+
+  input:focus:invalid + label {
+    color: #D0021B;
+
+    span {
+      color: #D0021B;
+      display: inline;
+    }
+  }
+
+  input:focus:invalid {
+    border-bottom: 1px solid #D0021B;
+  }
+
+  input:valid:focus + label {
+    color: #38A4E7 !important;
+  }
+
+  input:valid:focus {
+    border-bottom: 1px solid #38A4E7;
+  }
+
+  input:valid + label {
+    display: block !important;
+    top: 0px !important;
+    position: absolute !important;
+    font-size: 12px !important;
+    line-height: 14px !important;
+    font-weight: 400 !important;
+    color: rgba(51, 51, 51, 0.6) !important;
+
+    span {
+      right: -100%;
+      display: inline;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 700;
+      color: rgba(34, 50, 67, 1);
+      transition: 0.2s cubic-bezier(.4, 0, .2, 1);
+    }
+  }
+
+  input:focus + label {
+    display: block;
+    top: 0px;
+    position: absolute;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color: rgba(34, 50, 67, 1);
+    transition: 0.2s cubic-bezier(.4, 0, .2, 1);
+
+    span {
+      right: 0;
+      display: inline;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 700;
+      color: rgba(34, 50, 67, 1);
+      transition: 0.2s cubic-bezier(.4, 0, .2, 1);
+    }
+  }
+
+  .invalid_block {
+    display: none;
+  }
+}
+
+.invalid {
+  label {
+    color: #D0021B !important;
+  }
+
+  p {
+    color: #D0021B;
+    opacity: 1;
+    font-weight: 700;
+    line-height: 14px;
+    font-size: 12px;
+    display: block;
+  }
+
+  .invalid_block {
+    position: absolute;
+    z-index: 3;
+    display: block;
+    padding: 0 12px;
+
+    p {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}
+
+.required {
+
+  &:after {
+    content: '*';
+  }
+}
+
+.disabled {
+  opacity: 0;
+}
+
+.fs_24 {
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.checkbox{
+  display: flex;
+  align-items: center;
+  padding: 7px 0;
+
+
+  input{
+    display: none;
+  }
+
+  input + label{
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: inherit;
+    border: 1px solid #2F3B65;
+    border-radius: 1px;
+    cursor: pointer;
+
+    &.disabled {
+      opacity: 0.5;
+    }
+  }
+  input:checked + label{
+    background: url("../../../assets/icons/i-check.svg") no-repeat center;
+  }
+
+  label:last-child{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 22px;
+    cursor: pointer;
+    margin-left: 12px;
+    color: #333333;
+
+    & > img {
+      margin-right: 8px;
+    }
+
+    &.disabled {
+      opacity: 0.5;
+    }
+  }
+
+  .gray {
+    color: #A5A8A9;
+  }
+}
