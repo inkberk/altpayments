@@ -42,12 +42,13 @@ const validators = [
   }
 ];
 
-export interface LoginProps extends RouteComponentProps<any> {}
+export interface LoginProps extends RouteComponentProps<any> {from?: string;}
 
 export interface LoginState {
   email: string;
   password: string;
   remember: boolean;
+  from?: string;
 }
 
 @inject(STORE_USER)
@@ -58,12 +59,7 @@ export class LoginContainer extends React.Component<LoginProps, LoginState> {
 
   constructor(props: LoginProps, context: any) {
     super(props, context);
-    this.state = {
-      email: '',
-      password: '',
-      remember: false
-    };
-
+    console.log(this.state);
     this.form = new Former(
       {
         email: new FormField(
@@ -99,7 +95,7 @@ export class LoginContainer extends React.Component<LoginProps, LoginState> {
     );
 
     this.props[STORE_USER].setUser(user);
-    this.props.history.push(ROUTES.CUSTOMERS);
+    this.props.history.push(ROUTES.CUSTOMER_LIST);
   };
 
   render() {

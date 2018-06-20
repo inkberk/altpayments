@@ -1,0 +1,10 @@
+<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.5 22.5H0.5V0.5H11.7929L19.5 8.20711V22.5Z" transform="translate(3 2)" stroke="#2F3B65"/>
+<line y1="-0.5" x2="14" y2="-0.5" transform="translate(6 21.5939)" stroke="#2F3B65"/>
+<line y1="-0.5" x2="8" y2="-0.5" transform="translate(6 6.59387)" stroke="#2F3B65"/>
+<line y1="-0.5" x2="8" y2="-0.5" transform="translate(6 9.59387)" stroke="#2F3B65"/>
+<line y1="-0.5" x2="14" y2="-0.5" transform="translate(6 12.5939)" stroke="#2F3B65"/>
+<line y1="-0.5" x2="14" y2="-0.5" transform="translate(6 15.5939)" stroke="#2F3B65"/>
+<line y1="-0.5" x2="14" y2="-0.5" transform="translate(6 18.5939)" stroke="#2F3B65"/>
+<path d="M7.5 0.5V6.79289L1.20711 0.5H7.5Z" transform="translate(23 10) rotate(180)" fill="white" stroke="#2F3B65"/>
+</svg>

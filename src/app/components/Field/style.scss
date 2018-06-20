@@ -24,7 +24,7 @@
   font-weight: 700;
   line-height: 14px;
   font-size: 12px;
-  position: relative;
+  padding-top: 1px;
 
   input {
     z-index: 2;
@@ -50,6 +50,10 @@
       color: rgba(144, 152, 161, 0)
     }
 
+    &.right {
+      direction: RTL;
+    }
+
     &.none {
       width: 100%;
     }
@@ -73,9 +77,48 @@
       }
     }
 
+    &.easy {
+      &::-webkit-input-placeholder {
+        color: rgba(51, 51, 51, 0.6);
+        transition: 0.2s cubic-bezier(.4, 0, .2, 1);
+      }
+      &::-moz-placeholder {
+        color: rgba(51, 51, 51, 0.6);
+        transition: 0.2s cubic-bezier(.4, 0, .2, 1);
+      }
+      &:-moz-placeholder {
+        color: rgba(51, 51, 51, 0.6);
+        transition: 0.2s cubic-bezier(.4, 0, .2, 1);
+      }
+      &:-ms-input-placeholder {
+        color: rgba(51, 51, 51, 0.6);
+        transition: 0.2s cubic-bezier(.4, 0, .2, 1);
+      }
+      &:focus::-webkit-input-placeholder {
+        color: rgba(51, 51, 51, 0);
+        transition: 0.2s cubic-bezier(.4, 0, .2, 1);
+      }
+      &:focus::-moz-placeholder {
+        color: rgba(51, 51, 51, 0);
+        transition: 0.2s cubic-bezier(.4, 0, .2, 1);
+      }
+      &:focus:-moz-placeholder {
+        color: rgba(51, 51, 51, 0);
+        transition: 0.2s cubic-bezier(.4, 0, .2, 1);
+      }
+      &:focus:-ms-input-placeholder {
+        color: rgba(51, 51, 51, 0);
+        transition: 0.2s cubic-bezier(.4, 0, .2, 1);
+      }
+      & + label {
+        display: none !important;
+      }
+    }
+
     &:focus {
       outline: none;
     }
+
   }
 
   label {
@@ -129,7 +172,7 @@
   }
 
   input:valid + label {
-    display: block !important;
+    display: block;
     top: 0px !important;
     position: absolute !important;
     font-size: 12px !important;
@@ -202,6 +245,53 @@
   }
 }
 
+.novalidation {
+  input:focus:invalid {
+    border-bottom: 1px solid #38A4E7;
+  }
+
+  input:focus + label {
+    color: #38A4E7 !important;
+  }
+
+  label {
+    color: inherit !important;
+  }
+
+  p {
+    color: #38A4E7;
+    opacity: 1;
+    font-weight: 700;
+    line-height: 14px;
+    font-size: 12px;
+    display: block;
+  }
+
+  .invalid_block {
+    position: absolute;
+    z-index: 3;
+    display: block;
+    padding: 0 12px;
+
+    p {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}
+
+.under_input_block {
+  padding-top: 4px;
+
+  & > p {
+    font-size: 12px;
+    line-height: 12px;
+    color: #9B9B9B;
+    padding: 0 12px;
+  }
+}
+
 .required {
 
   &:after {
@@ -218,17 +308,16 @@
   line-height: 29px;
 }
 
-.checkbox{
+.checkbox {
   display: flex;
   align-items: center;
   padding: 7px 0;
 
-
-  input{
+  input {
     display: none;
   }
 
-  input + label{
+  input + label {
     display: block;
     width: 16px;
     height: 16px;
@@ -241,11 +330,11 @@
       opacity: 0.5;
     }
   }
-  input:checked + label{
+  input:checked + label {
     background: url("../../../assets/icons/i-check.svg") no-repeat center;
   }
 
-  label:last-child{
+  label:last-child {
     display: flex;
     align-items: center;
     font-size: 16px;

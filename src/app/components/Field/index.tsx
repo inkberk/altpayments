@@ -15,6 +15,7 @@ export class FieldProps implements FormFieldI {
   onChange?: Function;
   setValid?: Function;
   label?: string;
+  under_input_info?: string;
 
   constructor(
     type: FormFieldTypes,
@@ -111,11 +112,16 @@ export class Field extends React.Component<FieldProps, FormFieldState> {
               onChange={(event) => this.onChange(event.target.value)}
               className={!this.state.valid ? this.getClassList() : ''}
             />
-            <label>{this.props.label}</label>
+            <label>{this.props.placeholder}</label>
             {!this.state.valid && (
               <div className={styles.invalid_block}>
                 {/*<p>{props.invalid_info}</p>*/}
                 <ul>{this.getMessageList()}</ul>
+              </div>
+            )}
+            {this.props.under_input_info && (
+              <div className={styles.under_input_block}>
+                <p>{this.props.under_input_info}</p>
               </div>
             )}
           </div>

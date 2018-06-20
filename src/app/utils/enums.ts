@@ -12,7 +12,8 @@ export enum DataTypes {
   CHECKBOX = 'checkbox',
   RADIO = 'radio',
   PASSWORD = 'password',
-  EMAIL = 'email'
+  EMAIL = 'email',
+  URL = 'url'
 }
 
 export enum ValidatorTypes {

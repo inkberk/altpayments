@@ -1,0 +1,140 @@
+@import "../../../../assets/styles/colors";
+
+.customer_page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  form {
+    width: initial;
+  }
+}
+
+.list {
+  width: 100%;
+  padding: 24px 50px 48px 50px;
+  margin-top: 84px;
+
+  & > h1 {
+    padding-bottom: 24px;
+  }
+
+  & > .form_section:not(:last-child) {
+    padding-bottom: 36px;
+  }
+}
+
+.form_section {
+  & > h3 {
+    padding-bottom: 12px;
+  }
+}
+
+.company_form {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > *:nth-child(1) {
+    width: 50%;
+    padding-right: 20px;
+    padding-bottom: 24px;
+  }
+  & > *:nth-child(2) {
+    width: 50%;
+    padding-bottom: 24px;
+  }
+  & > *:nth-child(3) {
+    width: 25%;
+    padding-right: 20px;
+    padding-bottom: 24px;
+  }
+  & > *:nth-child(4) {
+    width: 25%;
+    padding-right: 20px;
+    padding-bottom: 24px;
+  }
+  & > *:nth-child(5) {
+    width: 25%;
+    padding-right: 20px;
+    padding-bottom: 24px;
+  }
+  & > *:nth-child(6) {
+    width: 25%;
+    padding-bottom: 24px;
+  }
+  & > *:nth-child(7) {
+    width: 50%;
+    padding-right: 20px;
+  }
+  & > *:nth-child(8) {
+    width: 50%;
+  }
+}
+
+.primary_form {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > *:nth-child(1) {
+    width: 50%;
+    padding-right: 20px;
+    padding-bottom: 24px;
+  }
+  & > *:nth-child(2) {
+    width: 50%;
+    padding-bottom: 24px;
+  }
+  & > *:nth-child(3) {
+    width: 100%;
+    padding-bottom: 24px;
+  }
+  & > *:nth-child(4) {
+    width: calc(100% / 3);
+    padding-right: 20px;
+    padding-bottom: 24px;
+  }
+  & > *:nth-child(5) {
+    width: calc(100% / 3);
+    padding-right: 20px;
+    padding-bottom: 24px;
+  }
+  & > *:nth-child(6) {
+    width: calc(100% / 3);
+    padding-bottom: 24px;
+  }
+}
+
+.button_area {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  & > p {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $black;
+    margin-left: 12px;
+    top: -1px;
+  }
+}
+
+.payment_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.check_container {
+  padding-left: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.button_container {
+  display: flex;
+  justify-content: flex-end;
+
+  & > *:not(:last-child) {
+    margin-right: 24px;
+  }
+
+}

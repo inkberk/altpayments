@@ -1,4 +1,5 @@
 export const API_ENDPOINT = {
+  /*AUTH*/
   LOGIN: 'login',
   REGISTER: 'register',
   PHONE_AUTH: 'phone/verification/verify',
@@ -6,7 +7,12 @@ export const API_ENDPOINT = {
   PASSWORD_RECOVER: 'password/email',
   PASSWORD_RESET: 'password/reset',
 
-  CUSTOMERS_LIST: 'customers'
+  PAYMENT_METHODS: 'payment/methods',
+
+  /*CUSTOMERS*/
+
+  CUSTOMER_CREATE: 'customers',
+  CUSTOMER_LIST: 'customers'
 };
 
 export const ROUTES = {
@@ -18,7 +24,9 @@ export const ROUTES = {
   PHONE_CHECK: '/2fa',
   RECOVER: '/recover',
 
-  CUSTOMERS: '/customers',
+  /*CUSTOMERS*/
+  CUSTOMER_CREATE: '/customers/new',
+  CUSTOMER_LIST: '/customers',
   VENDORS: '/vendors',
   QUICK_PAY: '/quick-pay',
   ANALYTICS: '/analytics',
@@ -41,7 +49,7 @@ interface MenuItemI {
 }
 
 export const MAIN_MENU: MenuItemI[] = [
-  {path: ROUTES.CUSTOMERS, title: 'Customers'},
+  {path: ROUTES.CUSTOMER_LIST, title: 'Customers'},
   {path: ROUTES.VENDORS, title: 'Vendors'},
   {path: ROUTES.QUICK_PAY, title: 'Quick pay'},
   {path: ROUTES.ANALYTICS, title: 'Analytics'},

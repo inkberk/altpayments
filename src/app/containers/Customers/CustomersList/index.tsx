@@ -9,6 +9,8 @@ import {CircleButton} from 'app/components/Buttons/CircleButton';
 import plus from '../../../../assets/icons/plus.svg';
 import * as styles from './style.scss';
 import {CustomerService} from "app/services/CustomerService";
+import CreateArea from "app/components/CreateArea";
+import {CustomerModel} from "app/models/CustomerModel";
 
 const data = [
   {
@@ -163,12 +165,19 @@ const data = [
     }
   ];*/
 
-export class CustomersList extends React.Component<any, any> {
+export interface CustomersListState {
+  customers: CustomerModel[]
+}
+
+export class CustomersList extends React.Component<any, CustomersListState> {
   private _customerService: CustomerService = CustomerService.Instance;
+  state = {
+    customers: [],
+  };
 
   async componentWillMount() {
-    const a = await this._customerService.getAll();
-    console.log(a);
+    const customers = await this._customerService.getAll();
+    this.setState({customers});
   }
 
   render() {
@@ -183,7 +192,36 @@ export class CustomersList extends React.Component<any, any> {
           </header>
           <div className={styles.table}>
             {/*<Table data={data} columns={columns}/>*/}
-            {/*<CreateArea name='John' type='customer'/>*/}
+            {this.state.customers.length ? (
+              <table style={{width: '100%'}}>
+                <thead>
+                  <tr>
+                    <th>Customer</th>
+                    <th>A/R</th>
+                    <th>Last 30 Days</th>
+                    <th>Last Month</th>
+                    <th>Sales YTD</th>
+                    <th>Message</th>
+                    <th>Invoice</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {this.state.customers.map(item => (
+                  <tr>
+                    <td>{item.business_name}</td>
+                    <td>{item.unpaid}</td>
+                    <td>{item.days}</td>
+                    <td>{item.month}</td>
+                    <td>{item.year}</td>
+                    <td>Message</td>
+                    <td>Invoice</td>
+                  </tr>
+                ))}
+                </tbody>
+              </table>
+            ) : (
+              <CreateArea name='John' type='customer'/>
+            )}
             {/*<Pagination/>*/}
           </div>
         </section>

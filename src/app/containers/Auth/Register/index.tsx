@@ -94,7 +94,7 @@ export class RegisterContainer extends React.Component<RouteComponentProps<any>,
     );
 
     this.props[STORE_USER].setUser(user);
-    this.props.history.push(ROUTES.CUSTOMERS);
+    this.props.history.push(ROUTES.CUSTOMER_LIST);
   };
 
   render() {
