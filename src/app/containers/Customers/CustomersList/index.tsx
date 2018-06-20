@@ -207,7 +207,7 @@ export class CustomersList extends React.Component<any, CustomersListState> {
                 </thead>
                 <tbody>
                 {this.state.customers.map(item => (
-                  <tr>
+                  <tr key={item.id}>
                     <td>{item.business_name}</td>
                     <td>{item.unpaid}</td>
                     <td>{item.days}</td>

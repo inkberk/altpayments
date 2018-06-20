@@ -10,11 +10,10 @@ import {PhoneAuthContainer} from 'app/containers/Auth/PhoneAuth';
 import {CustomersList} from 'app/containers/Customers/CustomersList';
 import {ROUTES} from "app/utils/constants";
 import {CustomerCreate} from "app/containers/Customers/CustomerCreate";
-/*
 import {LocalStorageService} from "app/services/LocalStorageService";
+import {checkToken} from "app/utils/functions";
 
-const LocalStorageService = LocalStorageService.Instance;
-*/
+const localStorageService = LocalStorageService.Instance;
 
 const PrivateRoute = ({component: Component, ...rest}) => (
   <Route {...rest} render={props => (
@@ -31,9 +30,9 @@ const PrivateRoute = ({component: Component, ...rest}) => (
 );
 
 const isAuthenticated = () => {
-  const user = false; //LocalStorageService.get('user');
-  const token = true; //LocalStorageService.get('token');
-  return user && token;
+  const user = localStorageService.get('user');
+  const token = localStorageService.get('token');
+  return user && token && checkToken(token);
 }
 
 // render react DOM
